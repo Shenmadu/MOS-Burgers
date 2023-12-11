@@ -1,0 +1,54 @@
+.vertical-line {
+    border-left: 1px solid black;    
+    height:auto;   
+    margin: 0;
+    padding: 0;
+}
+
+.btn-menu {
+    width: 150px;
+    height: 40px;
+    background-color: #F09C1F !important;
+    font-weight: bold !important;
+    border: #F09C1F !important;
+
+}
+.h2{
+    font-weight: bold !important;
+    padding-left: 30px;
+}
+.img-card{
+    max-height: 200px;
+    
+}
+.card-body li{
+    font-size:medium;
+}
+
+.nav-tabs a {
+    font-size: 16px;
+  }
+
+ 
+  @media (max-width: 768px) {
+    .nav-tabs a {
+      font-size: 12px;
+    }
+    
+  }
+  .btn-place{
+    background-color: #F09C1F !important;
+    font-weight: bold !important;
+    border: #F09C1F !important;
+  }
+
+  .btn-from{
+    font-weight: bold !important;
+    
+  }
+ 
+.btn-active {
+  background-color:#db3e00 !important;
+  
+ 
+}
