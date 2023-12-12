@@ -1,36 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MOS Burgers</title>
-    <link rel="stylesheet" href="styles/menu.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MOS Burgers</title>
+  <link rel="stylesheet" href="styles/menu.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
 </head>
-<body>
-    
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-lg-2 col-sm-12 text-bg-light">   
-             
-           
-            <img src="assests/menubarimg.webp" class="img-thumbnail mt-3" >
-            
-          
-           
-              <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
-                
-                
-              </a>
-              <hr>
 
-              <nav class="navbar navbar-expand-lg bg-body-tertiary">
-                <div class="container-fluid" >                  
-                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                  </button>
-                  <div class="collapse navbar-collapse" id="navbarNav">
+<body>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-2 col-sm-12 text-bg-light">
+
+
+        <img src="assests/menubarimg.webp" class="img-thumbnail mt-3">
+
+
+
+        <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+
+
+        </a>
+        <hr>
+
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+          <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
 
 
 
@@ -38,239 +42,276 @@
               <ul class="nav nav-pills flex-column mb-auto">
                 <li class="nav-item">
                   <a href="#" class="nav-link text-white">
-                    <button type="button" class="btn btn-primary active btn-menu mt-2 btn-active" onclick="window.location.href='index.html'" data-bs-toggle="button" aria-pressed="true">Menu</button>
+                    <button type="button" class="btn btn-primary active btn-menu mt-2 btn-active"
+                      onclick="window.location.href='index.html'" data-bs-toggle="button"
+                      aria-pressed="true">Menu</button>
 
                   </a>
                 </li>
                 <li>
-                  <a href="#" class="nav-link text-white">                   
-                    <button type="button" class="btn btn-primary active btn-menu mt-3" onclick="window.location.href='search.html'"  data-bs-toggle="button" aria-pressed="true">Search</button>
+                  <a href="#" class="nav-link text-white">
+                    <button type="button" class="btn btn-primary active btn-menu mt-3"
+                      onclick="window.location.href='search.html'" data-bs-toggle="button"
+                      aria-pressed="true">Search</button>
                   </a>
                 </li>
                 <li>
                   <a href="#" class="nav-link text-white">
-                    <button type="button" class="btn btn-primary active btn-menu mt-3" onclick="window.location.href='report.html'" data-bs-toggle="button" aria-pressed="true">Report</button>
+                    <button type="button" class="btn btn-primary active btn-menu mt-3"
+                      onclick="window.location.href='report.html'" data-bs-toggle="button"
+                      aria-pressed="true">Report</button>
                   </a>
                 </li>
                 <li>
                   <a href="#" class="nav-link text-white">
-                    <button type="button" class="btn btn-primary active btn-menu mt-3" data-bs-toggle="button" aria-pressed="true">Add Item</button>
+                    <button type="button" class="btn btn-primary active btn-menu mt-3"
+                      onclick="window.location.href='addItem.html'" data-bs-toggle="button" aria-pressed="true">Add
+                      Item</button>
                   </a>
                 </li>
                 <li>
-                  <a href="#" class="nav-link text-white">
-                    <button type="button" class="btn btn-primary active btn-menu mt-3" data-bs-toggle="button" aria-pressed="true">Remove</button>
-                  </a>                  
+
+                  <div class="dropdown ms-3">
+                    
+                      <button type="button" class="btn btn-primary active btn-menu mt-3 dropdown-toggle"
+                        data-bs-toggle="dropdown" aria-pressed="true">Remove</button>
+                    
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="removeitem.html">Remove Item</a></li>
+                      <li><a class="dropdown-item" href="removecustomer.html">Remove Customer</a></li>
+                      
+                    </ul>
+                 
+                  </div>
+                 
                 </li>
                 <li>
-                  <a href="#" class="nav-link text-white">
-                    <button type="button" class="btn btn-primary active btn-menu mt-3 mb-3" data-bs-toggle="button" aria-pressed="true">Update</button>
-                  </a>                  
+
+                  <div class="dropdown ms-3">
+                    
+                    <button type="button" class="btn btn-primary active btn-menu mt-3 dropdown-toggle"
+                      data-bs-toggle="dropdown" aria-pressed="true">Update</button>
+                  
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="updateitem.html">Update Item</a></li>
+                    <li><a class="dropdown-item" href="updatecustomer.html">Update Customer</a></li>
+                    
+                  </ul>
+               
+                </div>
+
+                  
                 </li>
               </ul>
             </div>
           </div>
         </nav>
 
-              <!-- <hr>             -->
-              
-            </div>
-            <div class="col-lg-8 col-sm-12 vertical-line">
-              <div class="row mt-3">
-                <div class="col-lg-3 col-sm-12">
-                  <h2>Dishes</h2>
-                </div>
-                <div >
-                  <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn " type="submit" style="background-color:#F09C1F">Search</button>
-                  </form>
-                </div>
-                
-              </div>
-              <div class="col-lg-12 col-sm-12">
-              <ul class="nav nav-tabs">
-                <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="index.html">Burgers</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Submarines</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Fries</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Pasta</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Chicken</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Beverages</a>
-                </li>
-              </ul>
-            </div>
+        <!-- <hr>             -->
 
-              <div id="carouselExample" class="carousel slide col-lg-12 col-sm-12">
-                <div class="carousel-inner">
-                  <div class="carousel-item active">
-                   <div class="d-block w-100 text-center">
+      </div>
+      <div class="col-lg-8 col-sm-12 vertical-line">
+        <div class="row mt-3">
+          <div class="col-lg-3 col-sm-12">
+            <h2>Dishes</h2>
+          </div>
+          <div>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn " type="submit" style="background-color:#F09C1F">Search</button>
+            </form>
+          </div>
 
-                    <div class="card mt-2 me-lg-4 me-sm-auto ms-lg-5 ms-sm-auto" style="width:15rem; height:auto; display: inline-block;">
-                      
-                      <img src="assests/card1.jpg" class="card-img-top "style="height: 200px;" alt="...">
-                      <div class="card-body">
-                        <h5 class="card-title" style="font-weight: bold;">B1001</h5>                       
-                        <ul class="list-group list-group-flush" style="font-weight: bold;">
-                          <li class="list-group-item">Classic Burger (Large)</li>
-                          <li class="list-group-item">Rs.750.00</li>
-                          <li class="list-group-item">Exp-2024-01-01</li>
-                          <li class="list-group-item">QTY-30</li>
-                        </ul>
-                        <div>
-                          <a href="#" class="btn btn-success" style="display: inline-block;">Buy now</a>     
-                          <p style="display: inline-block; margin-left: 10px;">7% OFF</p>  
-                      </div>                
-                          
-                      </div>
-                    </div>
-
-                    <div class="card mt-2 me-lg-4 me-sm-auto"  style="width:15rem; height:auto;  display: inline-block;">
-                      <img src="assests/card2.png" class="card-img-top "style="height: 200px;"   alt="...">
-                      <div class="card-body">
-                        <h5 class="card-title" style="font-weight: bold;">B1002</h5>                       
-                        <ul class="list-group list-group-flush" style="font-weight: bold;">
-                          <li class="list-group-item">Classic Burger (Reg)</li>
-                          <li class="list-group-item">Rs.1500.00</li>
-                          <li class="list-group-item">Exp-2024-01-01</li>
-                          <li class="list-group-item">QTY-45</li>
-                        </ul>
-                        <div>
-                          <a href="#" class="btn btn-success" style="display: inline-block;">Buy now</a>     
-                          <p style="display: inline-block; margin-left: 10px;">15% OFF</p>  
-                      </div>
-                      
-                      </div>
-                    </div>
-                    <div class="card mt-2 me-lg-4 me-sm-auto" style="width:15rem; height:auto; display: inline-block;">
-                      <img src="assests/card3.png" class="card-img-top "style="height: 200px;" alt="...">
-                      <div class="card-body">
-                        <h5 class="card-title" style="font-weight: bold;">B1003</h5>                       
-                        <ul class="list-group list-group-flush" style="font-weight: bold;">
-                          <li class="list-group-item">Turkey Burger</li>
-                          <li class="list-group-item">Rs.1600.00</li>
-                          <li class="list-group-item">Exp-2024-01-01</li>
-                          <li class="list-group-item">QTY-25</li>
-                        </ul>
-                        <div>
-                          <a href="#" class="btn btn-success" style="display: inline-block;">Buy now</a>     
-                          <p style="display: inline-block; margin-left: 10px;">0% OFF</p>  
-                      </div>
-
-                      </div>
-                    </div>
-
-                   </div>
-
-                  </div>
-                  <div class="carousel-item">
-
-                    <div class="d-block w-100 text-center">
-
-                      <div class="card mt-2 me-lg-4 me-sm-auto ms-lg-5 ms-sm-auto" style="width:15rem; height:auto; display: inline-block;">
-                        <img src="assests/card4.jpeg" class="card-img-top "style="height: 200px;" alt="...">
-                        <div class="card-body">
-                          <h5 class="card-title" style="font-weight: bold;">B1004</h5>                       
-                          <ul class="list-group list-group-flush" style="font-weight: bold;">
-                            <li class="list-group-item">Chicken Burger (Large)</li>
-                            <li class="list-group-item">Rs.1400.00</li>
-                            <li class="list-group-item">Exp-2024-02-01</li>
-                            <li class="list-group-item">QTY-38</li>
-                          </ul>
-                          <div>
-                            <a href="#" class="btn btn-success" style="display: inline-block;">Buy now</a>     
-                            <p style="display: inline-block; margin-left: 10px;">0% OFF</p>  
-                        </div>                
-                            
-                        </div>
-                      </div>
-  
-                      <div class="card mt-2 me-lg-4 me-sm-auto" style="width: 15rem; height: 480px; display: inline-block;">
-                        <img src="assests/card5.jfif" class="card-img-top "style="height: 200px;" alt="...">
-                        <div class="card-body">
-                          <h5 class="card-title" style="font-weight: bold;">B1005</h5>                       
-                          <ul class="list-group list-group-flush" style="font-weight: bold;">
-                            <li class="list-group-item">Chicken Burger (Reg)</li>
-                            <li class="list-group-item">Rs.800.00</li>
-                            <li class="list-group-item">Exp-2024-01-16</li>
-                            <li class="list-group-item">QTY-12</li>
-                          </ul>
-                          <div>
-                            <a href="#" class="btn btn-success" style="display: inline-block;">Buy now</a>     
-                            <p style="display: inline-block; margin-left: 10px;">20% OFF</p>  
-                        </div>
-                        
-                        </div>
-                      </div>
-                      <div class="card mt-2 me-lg-4 me-sm-auto" style="width: 15rem; height: 480px; display: inline-block;">
-                        <img src="assests/card6.jpg" class="card-img-top "style="height: 200px;" alt="...">
-                        <div class="card-body">
-                          <h5 class="card-title" style="font-weight: bold;">B1006</h5>                       
-                          <ul class="list-group list-group-flush" style="font-weight: bold;">
-                            <li class="list-group-item">Cheese Burger (Large)</li>
-                            <li class="list-group-item">Rs.1000.00</li>
-                            <li class="list-group-item">Exp-2024-01-02</li>
-                            <li class="list-group-item">QTY-25</li>
-                          </ul>
-                          <div>
-                            <a href="#" class="btn btn-success" style="display: inline-block;">Buy now</a>     
-                            <p style="display: inline-block; margin-left: 10px;">0% OFF</p>  
-                        </div>
-  
-                        </div>
-                      </div>
-  
-                     </div>
-                    
-                    
-                  </div>
-                  <div class="carousel-item">
-                    <img src="assests/menubarimg.webp" class="d-block w-100" alt="...">
-                  </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Next</span>
-                </button>
-              </div>
-              
-             
-
-            </div>
-            <div class="col-lg-2 col-sm-12 vertical-line">
-              <h2>Cart</h2>
-              <div>
-                <label for="txt-total" style="width: 50px;">Total = </label>
-                <input class="form-control" id="txt-total" type="number" style="width: 120px; display: inline-block;">
-              </div>
-              
-              <div class="d-grid gap-2 col-12 mx-auto mt-3 ">
-                <button class="btn btn-danger" type="button">Remove</button>    
-                <button class="btn btn-primary btn-place" onclick="window.location.href='placeOrder.html'" type="button">Place Order</button>               
-              </div>
-             
-            </div>
-            </div>
-            
         </div>
-        
+        <div class="col-lg-12 col-sm-12">
+          <ul class="nav nav-tabs">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html">Burgers</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Submarines</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Fries</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Pasta</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Chicken</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Beverages</a>
+            </li>
+          </ul>
+        </div>
 
+        <div id="carouselExample" class="carousel slide col-lg-12 col-sm-12">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="d-block w-100 text-center">
+
+                <div class="card mt-2 me-lg-4 me-sm-auto ms-lg-5 ms-sm-auto"
+                  style="width:15rem; height:auto; display: inline-block;">
+
+                  <img src="assests/card1.jpg" class="card-img-top " style="height: 200px;" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title" style="font-weight: bold;">B1001</h5>
+                    <ul class="list-group list-group-flush" style="font-weight: bold;">
+                      <li class="list-group-item">Classic Burger (Large)</li>
+                      <li class="list-group-item">Rs.750.00</li>
+                      <li class="list-group-item">Exp-2024-01-01</li>
+                      <li class="list-group-item">QTY-30</li>
+                    </ul>
+                    <div>
+                      <a href="#" class="btn btn-success" style="display: inline-block;">Buy now</a>
+                      <p style="display: inline-block; margin-left: 10px;">7% OFF</p>
+                    </div>
+
+                  </div>
+                </div>
+
+                <div class="card mt-2 me-lg-4 me-sm-auto" style="width:15rem; height:auto;  display: inline-block;">
+                  <img src="assests/card2.png" class="card-img-top " style="height: 200px;" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title" style="font-weight: bold;">B1002</h5>
+                    <ul class="list-group list-group-flush" style="font-weight: bold;">
+                      <li class="list-group-item">Classic Burger (Reg)</li>
+                      <li class="list-group-item">Rs.1500.00</li>
+                      <li class="list-group-item">Exp-2024-01-01</li>
+                      <li class="list-group-item">QTY-45</li>
+                    </ul>
+                    <div>
+                      <a href="#" class="btn btn-success" style="display: inline-block;">Buy now</a>
+                      <p style="display: inline-block; margin-left: 10px;">15% OFF</p>
+                    </div>
+
+                  </div>
+                </div>
+                <div class="card mt-2 me-lg-4 me-sm-auto" style="width:15rem; height:auto; display: inline-block;">
+                  <img src="assests/card3.png" class="card-img-top " style="height: 200px;" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title" style="font-weight: bold;">B1003</h5>
+                    <ul class="list-group list-group-flush" style="font-weight: bold;">
+                      <li class="list-group-item">Turkey Burger</li>
+                      <li class="list-group-item">Rs.1600.00</li>
+                      <li class="list-group-item">Exp-2024-01-01</li>
+                      <li class="list-group-item">QTY-25</li>
+                    </ul>
+                    <div>
+                      <a href="#" class="btn btn-success" style="display: inline-block;">Buy now</a>
+                      <p style="display: inline-block; margin-left: 10px;">0% OFF</p>
+                    </div>
+
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+            <div class="carousel-item">
+
+              <div class="d-block w-100 text-center">
+
+                <div class="card mt-2 me-lg-4 me-sm-auto ms-lg-5 ms-sm-auto"
+                  style="width:15rem; height:auto; display: inline-block;">
+                  <img src="assests/card4.jpeg" class="card-img-top " style="height: 200px;" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title" style="font-weight: bold;">B1004</h5>
+                    <ul class="list-group list-group-flush" style="font-weight: bold;">
+                      <li class="list-group-item">Chicken Burger (Large)</li>
+                      <li class="list-group-item">Rs.1400.00</li>
+                      <li class="list-group-item">Exp-2024-02-01</li>
+                      <li class="list-group-item">QTY-38</li>
+                    </ul>
+                    <div>
+                      <a href="#" class="btn btn-success" style="display: inline-block;">Buy now</a>
+                      <p style="display: inline-block; margin-left: 10px;">0% OFF</p>
+                    </div>
+
+                  </div>
+                </div>
+
+                <div class="card mt-2 me-lg-4 me-sm-auto" style="width: 15rem; height: 480px; display: inline-block;">
+                  <img src="assests/card5.jfif" class="card-img-top " style="height: 200px;" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title" style="font-weight: bold;">B1005</h5>
+                    <ul class="list-group list-group-flush" style="font-weight: bold;">
+                      <li class="list-group-item">Chicken Burger (Reg)</li>
+                      <li class="list-group-item">Rs.800.00</li>
+                      <li class="list-group-item">Exp-2024-01-16</li>
+                      <li class="list-group-item">QTY-12</li>
+                    </ul>
+                    <div>
+                      <a href="#" class="btn btn-success" style="display: inline-block;">Buy now</a>
+                      <p style="display: inline-block; margin-left: 10px;">20% OFF</p>
+                    </div>
+
+                  </div>
+                </div>
+                <div class="card mt-2 me-lg-4 me-sm-auto" style="width: 15rem; height: 480px; display: inline-block;">
+                  <img src="assests/card6.jpg" class="card-img-top " style="height: 200px;" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title" style="font-weight: bold;">B1006</h5>
+                    <ul class="list-group list-group-flush" style="font-weight: bold;">
+                      <li class="list-group-item">Cheese Burger (Large)</li>
+                      <li class="list-group-item">Rs.1000.00</li>
+                      <li class="list-group-item">Exp-2024-01-02</li>
+                      <li class="list-group-item">QTY-25</li>
+                    </ul>
+                    <div>
+                      <a href="#" class="btn btn-success" style="display: inline-block;">Buy now</a>
+                      <p style="display: inline-block; margin-left: 10px;">0% OFF</p>
+                    </div>
+
+                  </div>
+                </div>
+
+              </div>
+
+
+            </div>
+            <div class="carousel-item">
+              <img src="assests/menubarimg.webp" class="d-block w-100" alt="...">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+
+
+
+      </div>
+      <div class="col-lg-2 col-sm-12 vertical-line">
+        <h2>Cart</h2>
+        <div>
+          <label for="txt-total" style="width: 50px;">Total = </label>
+          <input class="form-control" id="txt-total" type="number" style="width: 120px; display: inline-block;">
+        </div>
+
+        <div class="d-grid gap-2 col-12 mx-auto mt-3 ">
+          <button class="btn btn-danger" type="button">Remove</button>
+          <button class="btn btn-primary btn-place" onclick="window.location.href='placeorder.html'" type="button">Place
+            Order</button>
+        </div>
+
+      </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  </div>
+
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
 </body>
+
 </html>

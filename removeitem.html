@@ -6,7 +6,7 @@
     <title>view previous orders</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-  <link rel="stylesheet" href="styles/search.css">
+  <link rel="stylesheet" href="styles/remove.css">
 </head>
 <body>
     <div class="container-fluid">
@@ -47,7 +47,7 @@
                     <li>
                       <a href="#" class="nav-link text-white">
     
-                        <button type="button" class="btn btn-primary active btn-menu mt-3 btn-active"
+                        <button type="button" class="btn btn-primary active btn-menu mt-3"
                           onclick="window.location.href='placeOrder.html'" data-bs-toggle="button"
                           aria-pressed="true">Search</button>
                       </a>
@@ -67,7 +67,7 @@
                     <li>
                       <div class="dropdown ms-3">
                     
-                        <button type="button" class="btn btn-primary active btn-menu mt-3 dropdown-toggle"
+                        <button type="button" class="btn btn-primary active btn-menu mt-3 dropdown-toggle btn-active"
                           data-bs-toggle="dropdown" aria-pressed="true">Remove</button>
                       
                       <ul class="dropdown-menu">
@@ -77,22 +77,12 @@
                       </ul>
                    
                     </div>
-                   
-                  </li>
-                  <li>
-  
-                    <div class="dropdown ms-3">
-                      
-                      <button type="button" class="btn btn-primary active btn-menu mt-3 dropdown-toggle"
-                        data-bs-toggle="dropdown" aria-pressed="true">Update</button>
-                    
-                    <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="updateitem.html">Update Item</a></li>
-                      <li><a class="dropdown-item" href="updatecustomer.html">Update Customer</a></li>
-                      
-                    </ul>
-                 
-                  </div>
+                    </li>
+                    <li>
+                      <a href="#" class="nav-link text-white">
+                        <button type="button" class="btn btn-primary active btn-menu mt-3 mb-3" data-bs-toggle="button"
+                          aria-pressed="true">Update</button>
+                      </a>
                     </li>
                   </ul>
                 </div>
@@ -106,57 +96,59 @@
             <a href="#" onclick="window.location.href='index.html'">
               <img src="/assests/back.png" alt="Back" style="width: 50px; height: 50px;">
             </a>
-            <h5 style="text-align: center;">view previous orders</h5>
+            <h5 style="text-align: center;">Remove Item</h5>
 
            
            
-            <div class="mb-3 row ms-3 me-3 mt-2">
-                <label for="inputTotal" class="col-sm-2 col-form-label">Customer Id</label>
+            <div class="mb-3 row ms-3 me-3 mt-2 mx-auto mb-5">
+                <label for="inputTotal" class="col-sm-2 col-form-label">Item Code</label>
                 <div class="col-sm-10">
                     <form class="d-flex" role="search">
                         <input class="form-control me-2" id="txt-search" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success" type="submit">Search</button>
+                        <button class="btn btn-outline-warning" type="submit">Search</button>
                       </form>
                 </div>
               </div>
 
-              <table class="table table-hover">
-                <thead>
-                  <tr>
-                    <th scope="col">OrderId</th>
-                    <th scope="col">CustName</th>
-                    <th scope="col">ItemCode</th>
-                    <th scope="col">Date</th>
-                    <th scope="col">QTY</th>
-                    <th scope="col">Amount</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <th scope="row">ODR001</th>
-                    <td>Danapala</td>
-                    <td>B1001</td>
-                    <td>2023-11-04</td>
-                    <td>10</td>
-                    <td>7500</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">ODR002</th>
-                    <td>Gunapala</td>
-                    <td>B1003</td>
-                    <td>2023-11-30</td>
-                    <td>1</td>
-                    <td>1600.00</td>
-                  </tr>
-                 
-                </tbody>
+              <form class="row g-3 mt-3 ms-2 mx-auto">
 
-              </table>
+                <div class="mb-3 row mx-auto">
+                  <label for="name" class="col-sm-2 col-form-label">Name</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" style="width:70%;">
+                  </div>
+                </div>
+      
+                <div class="mb-3 row mx-auto">
+                  <label for="date" class="col-sm-2 col-form-label">Date</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" style="width:70%;">
+                  </div>
+                </div>
+      
+                <div class="mb-3 row mx-auto">
+                  <label for="expDate" class="col-sm-2 col-form-label">Exp Date</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" style="width:70%;">
+                  </div>
+                </div>     
+                
+      
+                <div class="mb-3 row mx-auto">
+                  <label for="qty" class="col-sm-2 col-form-label">Quantity</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" style="width:70%;">
+                  </div>
+                </div>      
+               
+              </form>
+
+             
 
               <div>
                 <div class="d-grid gap-2 d-md-flex justify-content-md-end me-3">
-                  <button class="btn btn-success me-md-2" type="button">Update</button>
-                  <button class="btn btn-danger" type="button">Delete</button>
+                  
+                  <button class="btn btn-danger" type="button">Remove</button>
                 </div>
               </div>
 

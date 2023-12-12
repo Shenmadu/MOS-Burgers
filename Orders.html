@@ -63,21 +63,40 @@
                 </li>
                 <li>
                   <a href="#" class="nav-link text-white">
-                    <button type="button" class="btn btn-primary active btn-menu mt-3" data-bs-toggle="button"
-                      aria-pressed="true">Add Item</button>
+                    <button type="button" class="btn btn-primary active btn-menu mt-3"
+                      onclick="window.location.href='addItem.html'" data-bs-toggle="button" aria-pressed="true">Add
+                      Item</button>
                   </a>
                 </li>
                 <li>
-                  <a href="#" class="nav-link text-white">
-                    <button type="button" class="btn btn-primary active btn-menu mt-3" data-bs-toggle="button"
-                      aria-pressed="true">Remove</button>
-                  </a>
+                  <div class="dropdown ms-3">
+
+                    <button type="button" class="btn btn-primary active btn-menu mt-3 dropdown-toggle"
+                      data-bs-toggle="dropdown" aria-pressed="true">Remove</button>
+
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="removeitem.html">Remove Item</a></li>
+                      <li><a class="dropdown-item" href="removecustomer.html">Remove Customer</a></li>
+
+                    </ul>
+
+                  </div>
+
                 </li>
                 <li>
-                  <a href="#" class="nav-link text-white">
-                    <button type="button" class="btn btn-primary active btn-menu mt-3 mb-3" data-bs-toggle="button"
-                      aria-pressed="true">Update</button>
-                  </a>
+
+                  <div class="dropdown ms-3">
+
+                    <button type="button" class="btn btn-primary active btn-menu mt-3 dropdown-toggle"
+                      data-bs-toggle="dropdown" aria-pressed="true">Update</button>
+
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="updateitem.html">Update Item</a></li>
+                      <li><a class="dropdown-item" href="updatecustomer.html">Update Customer</a></li>
+
+                    </ul>
+
+                  </div>
                 </li>
               </ul>
             </div>
