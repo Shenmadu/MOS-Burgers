@@ -81,6 +81,13 @@
     .bd-placeholder-img-lg {
       font-size: 3.5rem;
     }
+    .form-control{
+      width: 100% !important;
+      height: 30px !important;
+    }
+    .btn-from{
+      width: 100% !important;
+    }
 }
 .btn-active {
   background-color:#db3e00 !important;

@@ -31,8 +31,14 @@
 
  
   @media (max-width: 768px) {
-    .nav-tabs a {
-      font-size: 12px;
+    #btn-add{
+      width:100% !important;
+      height: 35px !important;
+
+    }
+    .form-control{
+      width: 100% !important;
+      height: 30px !important;
     }
     
   }

@@ -81,6 +81,22 @@
     .bd-placeholder-img-lg {
       font-size: 3.5rem;
     }
+    #txt-search{
+      height: 30px;
+      
+    }
+    #btn-seach{
+      height: 30px;
+      text-align: center !important;
+    }
+    .form-control{
+      width: 100% !important;
+      height: 30px !important;
+    }
+    #btn-remove{
+      width:100% !important;
+      height: 35px !important;
+    }
 }
 .btn-active {
   background-color:#db3e00 !important;

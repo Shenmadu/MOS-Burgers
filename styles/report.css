@@ -61,7 +61,7 @@
 
 @media (max-width: 768px) {
     .btn-report {
-        width: 200px !important;
+        width: 100% !important;
         margin-bottom: 10%;
         align-items: center;
     }
@@ -80,6 +80,12 @@
     }
     .bd-placeholder-img-lg {
       font-size: 3.5rem;
+    }
+    th{
+      font-size: 6px !important;
+    }
+    td{
+      font-size:6px !important;     
     }
 }
 .btn-active {

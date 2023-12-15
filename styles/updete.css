@@ -34,6 +34,23 @@
     .nav-tabs a {
       font-size: 12px;
     }
+
+    #txt-search{
+      height: 30px;
+      
+    }
+    #btn-seach{
+      height: 30px;
+      text-align: center !important;
+    }
+    .form-control{
+      width: 100% !important;
+      height: 30px !important;
+    }
+    #btn-update{
+      width:100% !important;
+      height: 35px !important;
+    }
     
   }
   .btn-place{

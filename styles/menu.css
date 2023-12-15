@@ -32,9 +32,15 @@
  
   @media (max-width: 768px) {
     .nav-tabs a {
-      font-size: 12px;
+      font-size: 10px;
+      width: 50px;
+     
+      
     }
-    
+   
+  .list-group-item{
+    font-size: 12px !important;
+  }
   }
   .btn-place{
     background-color: #F09C1F !important;
