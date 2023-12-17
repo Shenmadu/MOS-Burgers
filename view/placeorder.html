@@ -7,7 +7,7 @@
   <title>Place order Form</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-  <link rel="stylesheet" href="styles/place.css">
+  <link rel="stylesheet" href="../styles/place.css">
 </head>
 
 <body>
@@ -17,7 +17,7 @@
       <div class="col-lg-2 col-sm-12 text-bg-light">
 
 
-        <img src="assests/menubarimg.webp" class="img-thumbnail mt-3">
+        <img src="../assests/menubarimg.webp" class="img-thumbnail mt-3">
 
 
 
@@ -26,6 +26,7 @@
 
         </a>
         <hr>
+        <!-- menu items -->
 
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
           <div class="container-fluid">
@@ -51,20 +52,22 @@
                   <a href="#" class="nav-link text-white">
 
                     <button type="button" class="btn btn-primary active btn-menu mt-3"
-                    onclick="window.location.href='search.html'" data-bs-toggle="button"
+                      onclick="window.location.href='search.html'" data-bs-toggle="button"
                       aria-pressed="true">Search</button>
                   </a>
                 </li>
                 <li>
                   <a href="#" class="nav-link text-white">
-                    <button type="button" class="btn btn-primary active btn-menu mt-3" onclick="window.location.href='report.html'" data-bs-toggle="button"
+                    <button type="button" class="btn btn-primary active btn-menu mt-3"
+                      onclick="window.location.href='report.html'" data-bs-toggle="button"
                       aria-pressed="true">Report</button>
                   </a>
                 </li>
                 <li>
                   <a href="#" class="nav-link text-white">
-                    <button type="button" class="btn btn-primary active btn-menu mt-3" onclick="window.location.href='addItem.html'" data-bs-toggle="button"
-                      aria-pressed="true">Add Item</button>
+                    <button type="button" class="btn btn-primary active btn-menu mt-3"
+                      onclick="window.location.href='addItem.html'" data-bs-toggle="button" aria-pressed="true">Add
+                      Item</button>
                   </a>
                 </li>
                 <li>
@@ -84,12 +87,15 @@
           </div>
         </nav>
 
-       
+        <!-- menu items -->
+
+        <!-- body section -->
+
 
       </div>
       <div class="col-lg-8 col-sm-12 vertical-line">
         <a href="#" onclick="window.location.href='menu.html'">
-          <img src="assests/back.png" alt="Back" style="width: 50px; height: 50px;">
+          <img src="../assests/back.png" alt="Back" style="width: 50px; height: 50px;">
         </a>
         <h5 style="text-align: center;">Place Order</h5>
         <form class="row g-3 mt-3 ms-2">
@@ -97,67 +103,86 @@
           <div class="mb-3 row">
             <label for="inputid" class="col-sm-2 col-form-label">OrderId</label>
             <div class="col-sm-10">
-              <input type="text" class="form-control" style="width:70%;">
+              <input type="text" class="form-control" style="width:70%;" id="ord-id">
             </div>
           </div>
 
           <div class="mb-3 row">
             <label for="inputCustId" class="col-sm-2 col-form-label">Customer Id</label>
             <div class="col-sm-10">
-              <input type="text" class="form-control" style="width:70%;">
+              <input type="text" class="form-control" style="width:70%;" id="customer-id">
             </div>
           </div>
 
           <div class="mb-3 row">
             <label for="inputName" class="col-sm-2 col-form-label">Name</label>
             <div class="col-sm-10">
-              <input type="text" class="form-control" style="width:70%;">
+              <input type="text" class="form-control" style="width:70%;" id="name-id">
             </div>
           </div>
 
           <div class="mb-3 row">
             <label for="inputDate" class="col-sm-2 col-form-label">Order Date</label>
             <div class="col-sm-10">
-              <input type="text" class="form-control" style="width:70%;">
+              <input type="text" class="form-control" style="width:70%;" id="date-id">
             </div>
           </div>
 
           <div class="mb-3 row">
             <label for="inputTotal" class="col-sm-2 col-form-label">Total</label>
             <div class="col-sm-10">
-              <input type="text" class="form-control" style="width:70%;">
+              <input type="text" class="form-control" style="width:70%;" id="total-id">
             </div>
           </div>
 
           <div class="mb-3 row">
             <label for="inputDiscount" class="col-sm-2 col-form-label">Discount</label>
             <div class="col-sm-10">
-              <input type="text" class="form-control" style="width:70%;">
+              <input type="text" class="form-control" style="width:70%;" id="discount-id">
             </div>
           </div>
 
           <div class="mb-3 row">
             <label for="inputAmount" class="col-sm-2 col-form-label">Amount</label>
             <div class="col-sm-10">
-              <input type="text" class="form-control" style="width:70%;">
+              <input type="text" class="form-control" style="width:70%;" id="amount-id">
             </div>
           </div>
 
           <div class="row mt-3">
 
-            <div class="col-lg-6 col-sm-12 " >
-              <button type="button" class="btn btn-primary mb-3  btn-from" style="background-color:#F09C1F; border: none; width: 200px">Recipt</button>
-              
+            <div class="col-lg-6 col-sm-12 ">
+              <button type="button" class="btn btn-primary mb-3  btn-from"
+                style="background-color:#F09C1F; border: none; width: 200px">Recipt</button>
+
             </div>
             <div class="col-lg-6 col-sm-12 d-md-flex justify-content-md-end">
-            <button type="button" class="btn btn-primary  btn-block mb-3 btn-from" style="background-color:#e41249; border: none; width: 200px">Place</button>
+              <button type="button" class="btn btn-primary  btn-block mb-3 btn-from"
+                style="background-color:#e41249; border: none; width: 200px" id="btn-place">Place</button>
             </div>
 
           </div>
-          
+
+          <div class="toast-container position-fixed bottom-0 end-0 p-3">
+            <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+              <div class="toast-header">
+                <img src="../assests/img/okimg.png" class="rounded me-2" width="5%" alt="...">
+                <strong class="me-auto">Order Placed Succesfully</strong>
+
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+              </div>
+              <div class="toast-body">
+                your order Succesfully placed
+              </div>
+            </div>
+          </div>
+
 
         </form>
 
+        <!-- body section -->
+
+        <!-- cart section -->
       </div>
 
       <div class="col-lg-2 col-sm-12 vertical-line">
@@ -167,6 +192,7 @@
           <input class="form-control" id="txt-total" type="number" style="width: 120px; display: inline-block;">
         </div>
 
+        <!-- cart section -->
 
 
       </div>
@@ -180,6 +206,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
     crossorigin="anonymous"></script>
+  <script src="../js/placeorder.js"></script>
 </body>
 
 </html>
