@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>view previous orders</title>
+    <title>Remove Customer</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-  <link rel="stylesheet" href="styles/remove.css">
+  <link rel="stylesheet" href="../styles/remove.css">
 </head>
 <body>
     <div class="container-fluid">
@@ -14,7 +14,7 @@
           <div class="col-lg-2 col-sm-12 text-bg-light">
     
     
-            <img src="assests/menubarimg.webp" class="img-thumbnail mt-3">
+            <img src="../assests/menubarimg.webp" class="img-thumbnail mt-3">
     
     
     
@@ -94,14 +94,14 @@
           </div>
           <div class="col-lg-10 col-sm-12 vertical-line">
             <a href="#" onclick="window.location.href='menu.html'">
-              <img src="assests/back.png" alt="Back" style="width: 50px; height: 50px;">
+              <img src="../assests/back.png" alt="Back" style="width: 50px; height: 50px;">
             </a>
-            <h5 style="text-align: center;">Remove Item</h5>
+            <h5 style="text-align: center;">Remove Customer</h5>
 
            
            
-            <div class="mb-3 row ms-3 me-3 mt-2 mx-auto mb-5">
-                <label for="inputTotal" class="col-sm-2 col-form-label">Item Code</label>
+            <div class="mb-3 row ms-3 me-3 mt-2 mb-5">
+                <label for="inputTotal" class="col-sm-2 col-form-label">CustomerId</label>
                 <div class="col-sm-10">
                     <form class="d-flex" role="search">
                         <input class="form-control me-2" id="txt-search" type="search" placeholder="Search" aria-label="Search">
@@ -112,30 +112,17 @@
 
               <form class="row g-3 mt-3 ms-2 mx-auto">
 
-                <div class="mb-3 row mx-auto">
+                <div class="mb-3 row mx-auto mb-5">
                   <label for="name" class="col-sm-2 col-form-label">Name</label>
                   <div class="col-sm-10">
                     <input type="text" class="form-control" style="width:70%;">
                   </div>
                 </div>
       
-                <div class="mb-3 row mx-auto">
-                  <label for="date" class="col-sm-2 col-form-label">Date</label>
-                  <div class="col-sm-10">
-                    <input type="text" class="form-control" style="width:70%;">
-                  </div>
-                </div>
-      
-                <div class="mb-3 row mx-auto">
-                  <label for="expDate" class="col-sm-2 col-form-label">Exp Date</label>
-                  <div class="col-sm-10">
-                    <input type="text" class="form-control" style="width:70%;">
-                  </div>
-                </div>     
                 
       
                 <div class="mb-3 row mx-auto">
-                  <label for="qty" class="col-sm-2 col-form-label">Quantity</label>
+                  <label for="qty" class="col-sm-2 col-form-label"> Order Quantity</label>
                   <div class="col-sm-10">
                     <input type="text" class="form-control" style="width:70%;">
                   </div>
@@ -146,7 +133,7 @@
              
 
               <div>
-                <div class="d-grid gap-2 d-md-flex justify-content-md-end me-3 mt-3 ms-2 mb-3">
+                <div class="d-grid gap-2 d-md-flex justify-content-md-end me-3 mt-3 ms-3 mb-3">
                   
                   <button class="btn btn-danger" type="button" id="btn-remove">Remove</button>
                 </div>
