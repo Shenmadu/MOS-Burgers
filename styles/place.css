@@ -88,6 +88,8 @@
     .btn-from{
       width: 100% !important;
     }
+   
+    
 }
 .btn-active {
   background-color:#db3e00 !important;
@@ -97,3 +99,15 @@
 .btn-menu:hover{    
   color: #333 !important; 
 }
+
+.error-form span{
+  
+  color: red;
+ 
+}
+.error-form span p{
+  color: green;
+}
+
+
+

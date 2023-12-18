@@ -8,6 +8,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   <link rel="stylesheet" href="../styles/place.css">
+  
 </head>
 
 <body>
@@ -98,54 +99,65 @@
           <img src="../assests/back.png" alt="Back" style="width: 50px; height: 50px;">
         </a>
         <h5 style="text-align: center;">Place Order</h5>
-        <form class="row g-3 mt-3 ms-2">
+        <form class="row g-3 mt-3 ms-2 error-form ">
 
           <div class="mb-3 row">
             <label for="inputid" class="col-sm-2 col-form-label">OrderId</label>
-            <div class="col-sm-10">
-              <input type="text" class="form-control" style="width:70%;" id="ord-id">
+            <div class="col-sm-10">              
+              <input type="text" class="form-control" style="width:70%;" id="ord-id" placeholder="OR000" onkeyup="validateId()">
+              <span id="id-error"></span>
+             
             </div>
+            
+           
           </div>
 
           <div class="mb-3 row">
             <label for="inputCustId" class="col-sm-2 col-form-label">Customer Id</label>
-            <div class="col-sm-10">
-              <input type="text" class="form-control" style="width:70%;" id="customer-id">
+            <div class="col-sm-10">              
+              <input type="text" class="form-control" style="width:70%;" id="customer-id"onkeyup="validateCustomerId()">
+              <span id="phone-error"></span>
+             
             </div>
           </div>
 
           <div class="mb-3 row">
             <label for="inputName" class="col-sm-2 col-form-label">Name</label>
             <div class="col-sm-10">
-              <input type="text" class="form-control" style="width:70%;" id="name-id">
+              <input type="text" class="form-control" style="width:70%;" id="name-id" onkeyup="validateName()">
+              <span id="name-error"></span>
             </div>
           </div>
 
           <div class="mb-3 row">
             <label for="inputDate" class="col-sm-2 col-form-label">Order Date</label>
             <div class="col-sm-10">
-              <input type="text" class="form-control" style="width:70%;" id="date-id">
+              <input type="text" class="form-control" style="width:70%;" id="date-id" placeholder="YYYY-MM-DD" onkeyup="validateDate()">
+              <span id="date-error"></span>
             </div>
           </div>
 
           <div class="mb-3 row">
             <label for="inputTotal" class="col-sm-2 col-form-label">Total</label>
             <div class="col-sm-10">
-              <input type="text" class="form-control" style="width:70%;" id="total-id">
+              <input type="text" class="form-control" style="width:70%;" id="total-id" onkeyup="validateTotal()">
+              <span id="total-error"></span>
             </div>
           </div>
 
           <div class="mb-3 row">
             <label for="inputDiscount" class="col-sm-2 col-form-label">Discount</label>
             <div class="col-sm-10">
-              <input type="text" class="form-control" style="width:70%;" id="discount-id">
+              <input type="text" class="form-control" style="width:70%;" id="discount-id"onkeyup="validateDiscount()" placeholder="0%">
+              <span id="discount-error"></span>
             </div>
           </div>
 
           <div class="mb-3 row">
             <label for="inputAmount" class="col-sm-2 col-form-label">Amount</label>
             <div class="col-sm-10">
-              <input type="text" class="form-control" style="width:70%;" id="amount-id">
+              <input type="text" class="form-control" style="width:70%;" id="amount-id"onkeyup="validateAmount()">
+              <span id="amount-error"></span>
             </div>
           </div>
 
@@ -173,6 +185,20 @@
               </div>
               <div class="toast-body">
                 your order Succesfully placed
+              </div>
+            </div>
+          </div>
+
+          <div class="toast-container position-fixed bottom-0 end-0 p-3">
+            <div id="liveToast2" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+              <div class="toast-header">
+                <img src="../assests/img/errorimg.png" class="rounded me-2" width="5%" alt="...">
+                <strong class="me-auto">Order Placed Unsuccesfull</strong>
+
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+              </div>
+              <div class="toast-body">
+                please add the data correctly
               </div>
             </div>
           </div>
@@ -207,6 +233,7 @@
     integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
     crossorigin="anonymous"></script>
   <script src="../js/placeorder.js"></script>
+  
 </body>
 
 </html>
