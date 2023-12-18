@@ -73,3 +73,11 @@
 .btn-menu:hover{    
   color: #333 !important; 
 }
+.error-form span{
+  
+  color: red;
+ 
+}
+.error-form span p{
+  color: green;
+}

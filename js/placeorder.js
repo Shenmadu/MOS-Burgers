@@ -96,6 +96,7 @@ function validateTotal() {
   totalError.innerHTML = "";
   return true;
 }
+
 function validateDiscount() {
   let id = document.getElementById("discount-id").value;
   let box = document.getElementById("discount-id");
