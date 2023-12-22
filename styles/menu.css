@@ -61,3 +61,7 @@
 .btn-menu:hover{    
   color: #333 !important; 
 }
+
+.cartImg >img{
+  width: 20%;
+}

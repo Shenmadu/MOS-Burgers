@@ -11,7 +11,7 @@
 
 </head>
 
-<body>  
+<body>
 
   <div class="container-fluid">
     <div class="row">
@@ -123,7 +123,7 @@
           </div>
 
         </div>
-        
+
         <div class="col-lg-12 col-sm-12">
           <ul class="nav nav-tabs mb-3" id="ex1" role="tablist">
 
@@ -169,8 +169,8 @@
             </li>
 
           </ul>
-        
-       
+
+
         </div>
 
         <div class="tab-content" id="ex1-content">
@@ -184,27 +184,29 @@
                 <div class="carousel-item active">
                   <div class="d-block w-100 text-center">
 
-                    <div class="card mt-2 me-lg-4 me-sm-auto ms-lg-5 ms-sm-auto"
+                    <div class="card mt-2 me-lg-4 me-sm-auto ms-lg-5 ms-sm-auto" id="item1"
                       style="width:15rem; height:auto; display: inline-block;">
 
                       <img src="../assests/card1.jpg" class="card-img-top img-card" style="height: 200px;" alt="...">
                       <div class="card-body">
                         <h5 class="card-title" style="font-weight: bold;">B1001</h5>
                         <ul class="list-group list-group-flush" style="font-weight: bold;">
-                          <li class="list-group-item">Classic Burger (Large)</li>
-                          <li class="list-group-item product-price">Rs.750.00</li>
+                          <li class="list-group-item" id="name">Classic Burger (Large)</li>
+                          <li class="list-group-item product-price" id="price">Rs.750.00</li>
                           <li class="list-group-item">Exp-2024-01-01</li>
                           <li class="list-group-item">QTY-30</li>
                         </ul>
                         <div>
-                          <a href="#" class="btn btn-success to-cart" style="display: inline-block;"  >Buy now</a>
-                          <p style="display: inline-block; margin-left: 10px;">7% OFF</p>
+                          <a href="#" class="btn btn-success to-cart" style="display: inline-block;"
+                            onclick="addToCart(item1,'B1001')">Buy now</a>
+                          <p style="display: inline-block; margin-left: 10px;" id="disc">7% OFF</p>
                         </div>
 
                       </div>
                     </div>
 
-                    <div class="card mt-2 me-lg-4 me-sm-auto" style="width:15rem; height:auto;  display: inline-block;">
+                    <div class="card mt-2 me-lg-4 me-sm-auto" style="width:15rem; height:auto;  display: inline-block;"
+                      id="item2">
                       <img src="../assests/card2.png" class="card-img-top " style="height: 200px;" alt="...">
                       <div class="card-body">
                         <h5 class="card-title" style="font-weight: bold;">B1002</h5>
@@ -215,13 +217,15 @@
                           <li class="list-group-item">QTY-45</li>
                         </ul>
                         <div>
-                          <a href="#" class="btn btn-success" style="display: inline-block;">Buy now</a>
+                          <a href="#" class="btn btn-success" style="display: inline-block;"
+                            onclick="addToCart(item2,'B1002')">Buy now</a>
                           <p style="display: inline-block; margin-left: 10px;">15% OFF</p>
                         </div>
 
                       </div>
                     </div>
-                    <div class="card mt-2 me-lg-4 me-sm-auto" style="width:15rem; height:auto; display: inline-block;">
+                    <div class="card mt-2 me-lg-4 me-sm-auto" style="width:15rem; height:auto; display: inline-block;"
+                      id="item3">
                       <img src="../assests/card3.png" class="card-img-top " style="height: 200px;" alt="...">
                       <div class="card-body">
                         <h5 class="card-title" style="font-weight: bold;">B1003</h5>
@@ -232,7 +236,8 @@
                           <li class="list-group-item">QTY-25</li>
                         </ul>
                         <div>
-                          <a href="#" class="btn btn-success" style="display: inline-block;">Buy now</a>
+                          <a href="#" class="btn btn-success" style="display: inline-block;"
+                            onclick="addToCart(item3,'B1003')">Buy now</a>
                           <p style="display: inline-block; margin-left: 10px;">0% OFF</p>
                         </div>
 
@@ -247,7 +252,7 @@
                   <div class="d-block w-100 text-center">
 
                     <div class="card mt-2 me-lg-4 me-sm-auto ms-lg-5 ms-sm-auto"
-                      style="width:15rem; height:auto; display: inline-block;">
+                      style="width:15rem; height:auto; display: inline-block;" id="item4">
                       <img src="../assests/card4.jpeg" class="card-img-top " style="height: 200px;" alt="...">
                       <div class="card-body">
                         <h5 class="card-title" style="font-weight: bold;">B1004</h5>
@@ -258,7 +263,8 @@
                           <li class="list-group-item">QTY-38</li>
                         </ul>
                         <div>
-                          <a href="#" class="btn btn-success" style="display: inline-block;">Buy now</a>
+                          <a href="#" class="btn btn-success" style="display: inline-block;"
+                            onclick="addToCart(item4,'B1004')">Buy now</a>
                           <p style="display: inline-block; margin-left: 10px;">0% OFF</p>
                         </div>
 
@@ -266,7 +272,7 @@
                     </div>
 
                     <div class="card mt-2 me-lg-4 me-sm-auto"
-                      style="width: 15rem; height: 480px; display: inline-block;">
+                      style="width: 15rem; height: 480px; display: inline-block;" id="item5">
                       <img src="../assests/card5.jfif" class="card-img-top " style="height: 200px;" alt="...">
                       <div class="card-body">
                         <h5 class="card-title" style="font-weight: bold;">B1005</h5>
@@ -277,14 +283,15 @@
                           <li class="list-group-item">QTY-12</li>
                         </ul>
                         <div>
-                          <a href="#" class="btn btn-success" style="display: inline-block;">Buy now</a>
+                          <a href="#" class="btn btn-success" style="display: inline-block;"
+                            onclick="addToCart(item5,'B1005')">Buy now</a>
                           <p style="display: inline-block; margin-left: 10px;">20% OFF</p>
                         </div>
 
                       </div>
                     </div>
                     <div class="card mt-2 me-lg-4 me-sm-auto"
-                      style="width: 15rem; height: 480px; display: inline-block;">
+                      style="width: 15rem; height: 480px; display: inline-block;" id="item6">
                       <img src="../assests/card6.jpg" class="card-img-top " style="height: 200px;" alt="...">
                       <div class="card-body">
                         <h5 class="card-title" style="font-weight: bold;">B1006</h5>
@@ -295,7 +302,8 @@
                           <li class="list-group-item">QTY-25</li>
                         </ul>
                         <div>
-                          <a href="#" class="btn btn-success" style="display: inline-block;">Buy now</a>
+                          <a href="#" class="btn btn-success" style="display: inline-block;"
+                            onclick="addToCart(item6,'B1006')">Buy now</a>
                           <p style="display: inline-block; margin-left: 10px;">0% OFF</p>
                         </div>
 
@@ -311,7 +319,7 @@
                   <div class="d-block w-100 text-center">
 
                     <div class="card mt-2 me-lg-4 me-sm-auto ms-lg-5 ms-sm-auto"
-                      style="width:15rem; height:auto; display: inline-block;">
+                      style="width:15rem; height:auto; display: inline-block;" id="item7">
                       <img src="../assests/card7.jfif" class="card-img-top " style="height: 200px;" alt="...">
                       <div class="card-body">
                         <h5 class="card-title" style="font-weight: bold;">B1007</h5>
@@ -322,7 +330,8 @@
                           <li class="list-group-item">QTY-28</li>
                         </ul>
                         <div>
-                          <a href="#" class="btn btn-success" style="display: inline-block;">Buy now</a>
+                          <a href="#" class="btn btn-success" style="display: inline-block;"
+                            onclick="addToCart(item7,'B1007')">Buy now</a>
                           <p style="display: inline-block; margin-left: 10px;">0% OFF</p>
                         </div>
 
@@ -330,7 +339,7 @@
                     </div>
 
                     <div class="card mt-2 me-lg-4 me-sm-auto"
-                      style="width: 15rem; height: 480px; display: inline-block;">
+                      style="width: 15rem; height: 480px; display: inline-block;" id="item8">
                       <img src="../assests/card8.jfif" class="card-img-top " style="height: 200px;" alt="...">
                       <div class="card-body">
                         <h5 class="card-title" style="font-weight: bold;">B1008</h5>
@@ -341,14 +350,15 @@
                           <li class="list-group-item">QTY-18</li>
                         </ul>
                         <div>
-                          <a href="#" class="btn btn-success" style="display: inline-block;">Buy now</a>
+                          <a href="#" class="btn btn-success" style="display: inline-block;"
+                            onclick="addToCart(item8,'B1008')">Buy now</a>
                           <p style="display: inline-block; margin-left: 10px;">15% OFF</p>
                         </div>
 
                       </div>
                     </div>
                     <div class="card mt-2 me-lg-4 me-sm-auto"
-                      style="width: 15rem; height: 480px; display: inline-block;">
+                      style="width: 15rem; height: 480px; display: inline-block;" id="item9">
                       <img src="../assests/card9.jfif" class="card-img-top " style="height: 200px;" alt="...">
                       <div class="card-body">
                         <h5 class="card-title" style="font-weight: bold;">B1009</h5>
@@ -359,7 +369,8 @@
                           <li class="list-group-item">QTY-24</li>
                         </ul>
                         <div>
-                          <a href="#" class="btn btn-success" style="display: inline-block;">Buy now</a>
+                          <a href="#" class="btn btn-success" style="display: inline-block;"
+                            onclick="addToCart(item9,'B1009')">Buy now</a>
                           <p style="display: inline-block; margin-left: 10px;">0% OFF</p>
                         </div>
 
@@ -1171,42 +1182,28 @@
         </div>
       </div>
       <div class="col-lg-2 col-sm-12 vertical-line">
-        <h2>Cart</h2>
-        
-        <div class="card mb-3" style="max-width:100%;">
-          <div class="row g-0">
-            <div class="col-md-4">
-              <img src="../assests/card1.jpg" class="img-fluid rounded-start" alt="...">
-            </div>
-            <div class="col-md-8">
-              <div class="card-body">
-                <h7 class="card-title">Card title</h7>
-                <p class="card-text">- 1 + </p>
-                
-              </div>
-            </div>
+
+        <div class="cart" id="cart">
+          <div class="title">CART</div>
+          <hr />
+          <div id="title"></div>
+          <div>Total=<p style="display: inline-block; margin: 0;" id="total-id">0.00</p>
           </div>
         </div>
 
-        <div class="d-grid gap-2 col-12 mx-auto mt-3 ">          
+
+        <div class="d-grid gap-2 col-12 mx-auto mt-3 ">
           <button class="btn btn-danger" type="button">Remove</button>
           <button class="btn btn-primary btn-place" onclick="window.location.href='placeorder.html'" type="button">Place
             Order</button>
         </div>
 
 
-        </div>
-
-
-        
-        <!-- <div>
-          <label for="txt-total" style="width: 50px;">Total = </label>
-          <input class="form-control" id="txt-total" type="number" style="width: 120px; display: inline-block;">
-        </div> -->
-
-        
       </div>
+
+
     </div>
+  </div>
 
   </div>
 
@@ -1216,7 +1213,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
     crossorigin="anonymous"></script>
-    <script src="../js/menu.js"></script>
+  <script src="../js/item.js"></script>
 </body>
 
 </html>

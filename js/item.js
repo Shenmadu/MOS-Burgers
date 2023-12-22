@@ -132,9 +132,9 @@ function validateDiscount() {
 }
 
 
-// save item
+//save item
 
-document.getElementById("btn-add").onclick = function () {
+function addItem() {
     if (validateName() == true && validateCode() == true && validateDate() == true &&
         validateCatagory() == true && validateDiscount() == true && validateQty() == true &&
         validatePrice() == true) {
@@ -169,39 +169,102 @@ document.getElementById("btn-add").onclick = function () {
     }
 }
 
+let addItemId = 0;
+
+let count1=1;
+let setTotal = document.getElementById("total-id");
+
+function addToCart(item, code) {
+    
+        addItemId += 1;
+        selectedItem = document.createElement('div');
+        selectedItem.classList.add('cartImg');
+        selectedItem.setAttribute('id', addItemId);
+
+        let img = document.createElement('img');
+        img.setAttribute('src', item.children[0].currentSrc);
+        selectedItem.append(img);
+
+        for (let i = 0; i < itemlist.length; i++) {
+            if (code === itemlist[i].code) {
+                cart.push(itemlist[i]);
+
+                let name = document.createElement('p');
+                name.textContent = itemlist[i].name;
+                selectedItem.append(name);
+
+                let count = document.createElement('p');
+                count.textContent = count1;
+                selectedItem.append(count);
+            }
+        }
+
+        selectedItem.style.display = 'flex';
+        selectedItem.style.marginBottom = '10px';
+
+        let cartItems = document.getElementById('title');
+        cartItems.append(selectedItem);
+
+
+       setTotal.innerHTML=findTotal();
+    }
+
+    function findTotal(){
+        let total = 0;
+        for (let i = 0; i < cart.length; i++) {
+           total+=cart[i].price;           
+        }
+        return total;
+    }
+
+
+function isAdded(code) {
+    for (let i = 0; i < cart.length; i++) {
+        if (code === cart[i].code) {
+            return true;
+        }
+    }
+    return false;
+}
+
+
+
+const cart=[]
+
+console.log(cart);
 
 const itemlist = [
     {
-        "code": "B01001",
+        "code": "B1001",
         "name": "Classic Burger (Large)",
-        "price": "Rs.750.00",
+        "price": 750.00,
         "expdate": "2024-01-03",
         "discount": "0",
         "catagory": "Burgers"
 
     },
     {
-        "code": "B01002",
+        "code": "B1002",
         "name": "Classic Burger (Regular)",
-        "price": "Rs.1500.00",
+        "price": 1500.00,
         "expdate": "2024-01-03",
         "discount": "15",
         "catagory": "Burgers"
 
     },
     {
-        "code": "B01003",
+        "code": "B1003",
         "name": "Turkey Burger",
-        "price": "Rs.1600.00",
+        "price": 1600.00,
         "expdate": "2024-01-03",
         "discount": "0",
         "catagory": "Burgers"
 
     },
     {
-        "code": "B01004",
+        "code": "B1004",
         "name": "Chicken Burger (Large)",
-        "price": "Rs.1400.00",
+        "price": 1400.00,
         "expdate": "2024-01-03",
         "discount": "0",
         "catagory": "Burgers"
