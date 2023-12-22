@@ -261,7 +261,8 @@ const itemlist = [
         "price": 750.00,
         "expdate": "2024-01-03",
         "discount": 0,
-        "catagory": "Burgers"
+        "catagory": "Burgers",
+        "qty": 30
 
     },
     {
@@ -270,7 +271,8 @@ const itemlist = [
         "price": 1500.00,
         "expdate": "2024-01-03",
         "discount": 15,
-        "catagory": "Burgers"
+        "catagory": "Burgers",
+        "qty": 45
 
     },
     {
@@ -279,7 +281,8 @@ const itemlist = [
         "price": 1600.00,
         "expdate": "2024-01-03",
         "discount": 0,
-        "catagory": "Burgers"
+        "catagory": "Burgers",
+        "qty": 25
 
     },
     {
@@ -288,7 +291,8 @@ const itemlist = [
         "price": 1400.00,
         "expdate": "2024-01-03",
         "discount": 0,
-        "catagory": "Burgers"
+        "catagory": "Burgers",
+        "qty": 38
 
     },
     {
@@ -297,7 +301,8 @@ const itemlist = [
         "price": 800.00,
         "expdate": "2024-01-03",
         "discount": 20,
-        "catagory": "Burgers"
+        "catagory": "Burgers",
+        "qty": 12
 
     }
     ,
@@ -307,15 +312,41 @@ const itemlist = [
         "price": 1000.00,
         "expdate": "2024-01-03",
         "discount": 0,
-        "catagory": "Burgers"
+        "catagory": "Burgers",
+        "qty": 25
 
     }
-    
+
 
 
 ]
 
 
-
 console.log(itemlist);
 
+//item table loard
+
+function generateDataTable() {
+    var itemTable = document.getElementById("Item-list");
+
+    var tableInnerHtml = `<tr>
+                        <td>Itemcode </td>
+                        <td>ItemName</td>
+                        <td>ItemQty</td>
+                        <td>ExpDate</td>
+                    </tr>`
+
+    itemlist.forEach(element => {
+        var tableRow = `<tr>
+                        <td>${element.code}</td>
+                        <td>${element.name}</td>
+                        <td>${element.qty}</td>
+                        <td>${element.expdate}</td>
+                    </tr>`
+
+        tableInnerHtml += tableRow;
+
+    });
+
+    itemTable.innerHTML = tableInnerHtml;
+}
