@@ -169,53 +169,69 @@ function addItem() {
     }
 }
 
+//cart 
 let addItemId = 0;
-
-let count1=1;
+let count1 = 1;
 let setTotal = document.getElementById("total-id");
 
 function addToCart(item, code) {
-    
-        addItemId += 1;
-        selectedItem = document.createElement('div');
-        selectedItem.classList.add('cartImg');
-        selectedItem.setAttribute('id', addItemId);
 
-        let img = document.createElement('img');
-        img.setAttribute('src', item.children[0].currentSrc);
-        selectedItem.append(img);
+    addItemId += 1;
+    selectedItem = document.createElement('div');
+    selectedItem.classList.add('cartImg');
+    selectedItem.setAttribute('id', addItemId);
 
-        for (let i = 0; i < itemlist.length; i++) {
-            if (code === itemlist[i].code) {
-                cart.push(itemlist[i]);
+    let img = document.createElement('img');
+    img.setAttribute('src', item.children[0].currentSrc);
+    selectedItem.append(img);
 
-                let name = document.createElement('p');
-                name.textContent = itemlist[i].name;
-                selectedItem.append(name);
+    for (let i = 0; i < itemlist.length; i++) {
+        if (code === itemlist[i].code) {
+            cart.push(itemlist[i]);
 
-                let count = document.createElement('p');
-                count.textContent = count1;
-                selectedItem.append(count);
-            }
+            let name = document.createElement('p');
+            name.textContent = itemlist[i].name;
+            selectedItem.append(name);
+
+            let count = document.createElement('p');
+            count.textContent = count1;
+            selectedItem.append(count);
+
+            let delBtn = document.createElement('button')
+            delBtn.innerText = 'Delete'
+            delBtn.setAttribute('onclick', 'del(' + addItemId + ')')
+            delBtn.style.width = '100px';
+            delBtn.style.height = '30px';
+            delBtn.style.backgroundColor = 'red';
+
+            selectedItem.append(delBtn);
         }
-
-        selectedItem.style.display = 'flex';
-        selectedItem.style.marginBottom = '10px';
-
-        let cartItems = document.getElementById('title');
-        cartItems.append(selectedItem);
-
-
-       setTotal.innerHTML=findTotal();
     }
 
-    function findTotal(){
-        let total = 0;
-        for (let i = 0; i < cart.length; i++) {
-           total+=cart[i].price;           
-        }
-        return total;
+    selectedItem.style.display = 'flex';
+    selectedItem.style.marginBottom = '10px';
+
+    let cartItems = document.getElementById('title');
+    cartItems.append(selectedItem);
+
+
+    setTotal.innerHTML = findTotal();
+}
+function del(item) {
+    document.getElementById(item).remove();
+}
+
+function findTotal() {
+    let total = 0;
+    for (let i = 0; i < cart.length; i++) {
+        let price = cart[i].price;
+        let disc = cart[i].discount;
+
+        total += (price - price * disc / 100);
     }
+    return total;
+}
+
 
 
 function isAdded(code) {
@@ -227,11 +243,16 @@ function isAdded(code) {
     return false;
 }
 
-
-
-const cart=[]
+const cart = []
 
 console.log(cart);
+
+//cart 
+
+function removeCart() {
+    cart.pop();
+
+}
 
 const itemlist = [
     {
@@ -239,7 +260,7 @@ const itemlist = [
         "name": "Classic Burger (Large)",
         "price": 750.00,
         "expdate": "2024-01-03",
-        "discount": "0",
+        "discount": 0,
         "catagory": "Burgers"
 
     },
@@ -248,7 +269,7 @@ const itemlist = [
         "name": "Classic Burger (Regular)",
         "price": 1500.00,
         "expdate": "2024-01-03",
-        "discount": "15",
+        "discount": 15,
         "catagory": "Burgers"
 
     },
@@ -257,7 +278,7 @@ const itemlist = [
         "name": "Turkey Burger",
         "price": 1600.00,
         "expdate": "2024-01-03",
-        "discount": "0",
+        "discount": 0,
         "catagory": "Burgers"
 
     },
@@ -266,10 +287,30 @@ const itemlist = [
         "name": "Chicken Burger (Large)",
         "price": 1400.00,
         "expdate": "2024-01-03",
-        "discount": "0",
+        "discount": 0,
+        "catagory": "Burgers"
+
+    },
+    {
+        "code": "B1005",
+        "name": "Chicken Burger (Regular)",
+        "price": 800.00,
+        "expdate": "2024-01-03",
+        "discount": 20,
         "catagory": "Burgers"
 
     }
+    ,
+    {
+        "code": "B1006",
+        "name": "Cheese Burger (Large)",
+        "price": 1000.00,
+        "expdate": "2024-01-03",
+        "discount": 0,
+        "catagory": "Burgers"
+
+    }
+    
 
 
 ]

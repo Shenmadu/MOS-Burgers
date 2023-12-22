@@ -1,3 +1,7 @@
+import { findTotal } from './item';
+let totalValue = findTotal();
+console.log(totalValue);
+
 const orders = []
 
 let ordError = document.getElementById("id-error");
@@ -113,26 +117,11 @@ function validateDiscount() {
   }
   box.style.borderColor = '#4caf50';
   discountError.innerHTML = "";
+
+  let amount = document.getElementById("amount-id");
+  amount.innerHTML=findAmount()
+
   return true;
-}
-
-function validateAmount() {
-  let amount = document.getElementById("amount-id").value;
-  let box = document.getElementById("amount-id");
-
-  if (amount.length == 0) {
-    amountError.innerHTML = "Amount is required";
-  }
-
-  if (!amount.match(/^\d*\.?\d+$/)) {
-    box.style.borderColor = '#ef1504';
-    amountError.innerHTML = "Amount is not valid";
-    return false;
-  }
-  box.style.borderColor = '#4caf50';
-  amountError.innerHTML = "";
-  return true;
-
 }
 
 
@@ -142,7 +131,7 @@ function validateAmount() {
 
 
 document.getElementById("btn-place").onclick = function (){
-  if (validateName() == true && validateId() == true && validateAmount() == true &&
+  if (validateName() == true && validateId() == true  &&
     validateCustomerId() == true && validateDate() == true && validateDiscount() == true &&
     validateTotal() == true) {
 
@@ -154,7 +143,7 @@ document.getElementById("btn-place").onclick = function (){
         "date": document.getElementById("date-id").value,
         "total": document.getElementById("total-id").value,
         "discount": document.getElementById("discount-id").value,
-        "amount": document.getElementById("amount-id").value
+        "amount": findAmount()
 
       }
     );
@@ -166,7 +155,7 @@ document.getElementById("btn-place").onclick = function (){
       document.getElementById("date-id").value = "",
       document.getElementById("total-id").value = "",
       document.getElementById("discount-id").value = "",
-      document.getElementById("amount-id").value = ""
+      document.getElementById("amount-id").innerHTML=""
 
       const toastBootstrap = new bootstrap.Toast(document.getElementById('liveToast'));
       toastBootstrap.show();
@@ -181,4 +170,10 @@ document.getElementById("btn-place").onclick = function (){
 
 console.log(orders);
 
-
+function findAmount(){
+  let amount;
+  let total = document.getElementById("total-id").value;
+  let disc = document.getElementById("discount-id").value;
+  amount=total-(total*disc/100);
+  return amount;
+}
